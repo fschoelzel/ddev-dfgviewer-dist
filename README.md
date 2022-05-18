@@ -22,6 +22,8 @@ ddev launch '/viewer?tx_dlf[id]=https://digital.slub-dresden.de/data/kitodo/TheD
 ddev reset
 ```
 
+You may need to set the storage PID in backend.
+
 ## URLs
 
 - Backend Login: https://dfgviewer-dist.ddev.site/typo3/
