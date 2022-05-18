@@ -9,10 +9,14 @@ A more comprehensive DDEV system based on database dumps is available at https:/
 ```bash
 git clone https://github.com/slub/ddev-dfgviewer-dist.git
 cd ddev-dfgviewer-dist
+git switch dev-mediaplayer
 
 ddev start
 ddev check-install
 ddev launch '/viewer?tx_dlf[id]=https://digital.slub-dresden.de/data/kitodo/TheDarea_416971482-19100223/TheDarea_416971482-19100223_mets.xml'
+
+or open local METS/MODS:
+ddev launch '/viewer?tx_dlf[id]=https://dfgviewer-dist.ddev.site/extra/Schattensucher.xml'
 ```
 
 ## Other Commands

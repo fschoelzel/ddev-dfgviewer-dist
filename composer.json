@@ -42,8 +42,8 @@
 		"typo3/cms-t3editor": "^11.5.30",
 		"typo3/cms-tstemplate": "^11.5.30",
 		"typo3/cms-viewpage": "^11.5.30",
-		"kitodo/presentation": "dev-master",
-		"slub/dfgviewer": "dev-master"
+		"kitodo/presentation": "dev-dev-mediaplayer",
+		"slub/dfgviewer": "dev-dev-mediaplayer"
 	},
     "minimum-stability": "dev",
 	"prefer-stable": true,
