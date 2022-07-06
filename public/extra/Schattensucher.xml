@@ -61,18 +61,36 @@
             </mets:xmlData>
         </mets:mdWrap>
     </mets:dmdSec>
+    <mets:amdSec ID="AMD">
+        <mets:techMD ID="VIDEOMD">
+            <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="VIDEOMD">
+                <mets:xmlData>
+                    <videomd:VIDEOMD ANALOGDIGITALFLAG="FileDigital">
+                        <videomd:fileData>
+                            <videomd:frameRate mode="Fixed">25</videomd:frameRate>
+                        </videomd:fileData>
+                    </videomd:VIDEOMD>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+    </mets:amdSec>
     <mets:fileSec>
         <mets:fileGrp USE="VIDEO">
-            <mets:file ID="FILE_0000_DEFAULT_MPD" MIMETYPE="application/dash+xml">
+            <mets:file ADMID="AMD" ID="FILE_0000_DEFAULT_MPD" MIMETYPE="application/dash+xml">
                 <mets:FLocat LOCTYPE="URL" xlink:href="https://media.sachsen.digital/vid_dig_x_000819/vid_dig_x_000819.mpd"/>
             </mets:file>
-            <mets:file ID="FILE_0000_DEFAULT_HLS" MIMETYPE="application/vnd.apple.mpegurl">
+            <mets:file ADMID="AMD" ID="FILE_0000_DEFAULT_HLS" MIMETYPE="application/vnd.apple.mpegurl">
                 <mets:FLocat LOCTYPE="URL" xlink:href="https://media.sachsen.digital/vid_dig_x_000819/vid_dig_x_000819.m3u8"/>
             </mets:file>
         </mets:fileGrp>
         <mets:fileGrp USE="THUMBS">
             <mets:file ID="FILE_0000_THUMBS" MIMETYPE="image/jpeg">
                 <mets:FLocat LOCTYPE="URL" xlink:href="https://media.sachsen.digital/vid_dig_x_000819/vid_dig_x_000819.jpg"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="WAVEFORM">
+            <mets:file ID="FILE_0000_WAVEFORM" MIMETYPE="application/vnd.kitodo.audiowaveform">
+                <mets:FLocat LOCTYPE="URL" xlink:href="/extra/vid_dig_x_000819.dat"/>
             </mets:file>
         </mets:fileGrp>
     </mets:fileSec>
@@ -100,6 +118,7 @@
             <mets:fptr FILEID="FILE_0000_THUMBS"/>
             <mets:div ID="PHYS_0001" ORDER="1" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:00:00" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -109,6 +128,7 @@
             </mets:div>
             <mets:div ID="PHYS_0002" ORDER="2" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:06:04" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -118,6 +138,7 @@
             </mets:div>
             <mets:div ID="PHYS_0003" ORDER="3" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:14:20" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -127,6 +148,7 @@
             </mets:div>
             <mets:div ID="PHYS_0004" ORDER="4" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:22:01" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -136,6 +158,7 @@
             </mets:div>
             <mets:div ID="PHYS_0005" ORDER="5" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:27:44" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -145,6 +168,7 @@
             </mets:div>
             <mets:div ID="PHYS_0006" ORDER="6" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:30:12" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -154,6 +178,7 @@
             </mets:div>
             <mets:div ID="PHYS_0007" ORDER="7" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:33:39" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -163,6 +188,7 @@
             </mets:div>
             <mets:div ID="PHYS_0008" ORDER="8" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:38:24" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -172,6 +198,7 @@
             </mets:div>
             <mets:div ID="PHYS_0009" ORDER="9" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:46:19" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -181,6 +208,7 @@
             </mets:div>
             <mets:div ID="PHYS_0010" ORDER="10" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:51:53" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -190,6 +218,7 @@
             </mets:div>
             <mets:div ID="PHYS_0011" ORDER="11" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="00:55:59" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -199,6 +228,7 @@
             </mets:div>
             <mets:div ID="PHYS_0012" ORDER="12" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="01:11:50" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -208,6 +238,7 @@
             </mets:div>
             <mets:div ID="PHYS_0013" ORDER="13" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="01:20:11" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -217,6 +248,7 @@
             </mets:div>
             <mets:div ID="PHYS_0014" ORDER="14" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="01:24:51" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
@@ -226,6 +258,7 @@
             </mets:div>
             <mets:div ID="PHYS_0015" ORDER="15" TYPE="track">
                 <mets:fptr FILEID="FILE_0000_THUMBS"/>
+                <mets:fptr FILEID="FILE_0000_WAVEFORM"/>
                 <mets:fptr>
                     <mets:area FILEID="FILE_0000_DEFAULT_MPD" BEGIN="01:29:58" BETYPE="TIME" EXTENT="00:00:00" EXTTYPE="TIME"></mets:area>
                 </mets:fptr>
