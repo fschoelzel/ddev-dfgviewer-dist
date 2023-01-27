@@ -1,0 +1,7 @@
+version: '3.6'
+services:
+  web:
+    volumes:
+      - "/mnt/c/Users/kmiec/Projects/kitodo-presentation:/var/www/extensions/kitodo-presentation"
+      - "/mnt/c/Users/kmiec/Projects/dfg-viewer:/var/www/extensions/dfg-viewer"
+      - "/mnt/c/Users/kmiec/Projects/slub_digitalcollections:/var/www/extensions/slub_digitalcollections"

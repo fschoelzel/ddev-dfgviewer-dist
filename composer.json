@@ -1,0 +1,59 @@
+{
+	"repositories": {
+		"local": {
+			"type": "path",
+			"url": "/mnt/c/users/kmiec/Projects/*"
+		},
+		"0": {
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	},
+	"name": "typo3/cms-base-distribution",
+	"description": "TYPO3 CMS Base Distribution",
+	"license": "GPL-2.0-or-later",
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"platform": {
+			"php": "7.4"
+		}
+	},
+	"require": {
+		"helhum/typo3-console": "^6.7.2",
+		"typo3/minimal": "^10.4",
+		"typo3/cms-about": "^10.4",
+		"typo3/cms-adminpanel": "^10.4",
+		"typo3/cms-belog": "^10.4",
+		"typo3/cms-beuser": "^10.4",
+		"typo3/cms-felogin": "^10.4",
+		"typo3/cms-fluid-styled-content": "^10.4",
+		"typo3/cms-form": "^10.4",
+		"typo3/cms-impexp": "^10.4",
+		"typo3/cms-info": "^10.4",
+		"typo3/cms-redirects": "^10.4",
+		"typo3/cms-reports": "^10.4",
+		"typo3/cms-rte-ckeditor": "^10.4",
+		"typo3/cms-setup": "^10.4",
+		"typo3/cms-seo": "^10.4",
+		"typo3/cms-sys-note": "^10.4",
+		"typo3/cms-t3editor": "^10.4",
+		"typo3/cms-tstemplate": "^10.4",
+		"typo3/cms-viewpage": "^10.4",
+		"kitodo/presentation": "dev-update-ol",
+		"slub/dfgviewer": "dev-master"
+	},
+    "minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"typo3-cms-scripts": [
+			"typo3cms install:generatepackagestates",
+			"typo3cms install:fixfolderstructure"
+		],
+		"post-autoload-dump": [
+			"@typo3-cms-scripts"
+		]
+	}
+}
