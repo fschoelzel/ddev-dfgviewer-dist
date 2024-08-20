@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.vscode
 # The approach of this repo is to produce a "fresh install", so don't include composer.lock
 composer.lock
 nbproject
