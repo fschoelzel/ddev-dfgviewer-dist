@@ -11,8 +11,8 @@ test -f public/typo3conf/LocalConfiguration.php || typo3cms install:setup
 typo3cms extension:activate dlf
 
 # # Other settings
-typo3cms configuration:set 'EXTENSIONS/dlf/fileGrpAudio' 'AUDIO'
-typo3cms configuration:set 'EXTENSIONS/dlf/fileGrpVideo' 'VIDEO,DEFAULT'
+typo3cms configuration:set 'EXTENSIONS/dlf/files/useGroupsAudio' 'AUDIO'
+typo3cms configuration:set 'EXTENSIONS/dlf/files/useGroupsVideo' 'VIDEO,DEFAULT'
 typo3cms configuration:set --json 'FE/cacheHash/requireCacheHashPresenceParameters' '["tx_dlf[id]"]'
 typo3cms configuration:set 'FE/pageNotFoundOnCHashError' 0
 typo3cms configuration:set 'EXTCONF/lang/availableLanguages' '["de"]' --json
