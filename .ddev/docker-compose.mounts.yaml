@@ -2,6 +2,6 @@
 services:
   web:
     volumes:
-      - "$HOME/projects/extensions/fschoelzel/kitodo-presentation:/var/www/extensions/kitodo-presentation"
-      - "$HOME/projects/extensions/fschoelzel/dfg-viewer:/var/www/extensions/dfg-viewer"
-      - "$HOME/projects/extensions/fschoelzel/slub_digitalcollections:/var/www/extensions/slub_digitalcollections"
+      # - "$HOME/projects/extensions/fschoelzel/kitodo-presentation:/var/www/extensions/kitodo-presentation"
+      # - "$HOME/projects/extensions/fschoelzel/dfg-viewer:/var/www/extensions/dfg-viewer"
+      # - "$HOME/projects/extensions/fschoelzel/slub_digitalcollections:/var/www/extensions/slub_digitalcollections"

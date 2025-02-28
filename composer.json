@@ -1,9 +1,17 @@
 {
 	"repositories": {
-		"local": {
-			"type": "path",
-			"url": "/var/www/extensions/*"
-		},
+        "dfgviewer": {
+            "type": "path",
+            "url": "public/typo3conf/ext/dfg-viewer"
+        },
+        "kitodo-presentation": {
+            "type": "path",
+            "url": "public/typo3conf/ext/kitodo-presentation"
+        },
+		"slub-digitalcollections": {
+            "type": "path",
+            "url": "public/typo3conf/ext/slub_digitalcollections"
+        },
 		"0": {
 			"type": "composer",
 			"url": "https://composer.typo3.org/"
@@ -18,38 +26,38 @@
 			"typo3/cms-composer-installers": true
 		},
 		"platform": {
-			"php": "7.4.1"
+			"php": "8.2"
 		}
 	},
 	"require": {
-		"helhum/typo3-console": "^7.0.2",
-		"typo3/minimal": "^11.5",
-		"typo3/cms-about": "^11.5.30",
-		"typo3/cms-adminpanel": "^11.5.30",
-		"typo3/cms-belog": "^11.5.30",
-		"typo3/cms-beuser": "^11.5.30",
-		"typo3/cms-felogin": "^11.5.30",
-		"typo3/cms-fluid-styled-content": "^11.5.30",
-		"typo3/cms-form": "^11.5.30",
-		"typo3/cms-impexp": "^11.5.30",
-		"typo3/cms-info": "^11.5.30",
-		"typo3/cms-redirects": "^11.5.30",
-		"typo3/cms-reports": "^11.5.30",
-		"typo3/cms-rte-ckeditor": "^11.5.30",
-		"typo3/cms-setup": "^11.5.30",
-		"typo3/cms-seo": "^11.5.30",
-		"typo3/cms-sys-note": "^11.5.30",
-		"typo3/cms-t3editor": "^11.5.30",
-		"typo3/cms-tstemplate": "^11.5.30",
-		"typo3/cms-viewpage": "^11.5.30",
-		"kitodo/presentation": "dev-dev-mediaplayer",
-		"slub/dfgviewer": "dev-dev-mediaplayer"
+		"helhum/typo3-console": "^8.2",
+		"typo3/minimal": "^12.4",
+		"typo3/cms-about": "^12.4",
+		"typo3/cms-adminpanel": "^12.4",
+		"typo3/cms-belog": "^12.4",
+		"typo3/cms-beuser": "^12.4",
+		"typo3/cms-felogin": "^12.4",
+		"typo3/cms-fluid-styled-content": "^12.4",
+		"typo3/cms-form": "^12.4",
+		"typo3/cms-impexp": "^12.4",
+		"typo3/cms-info": "^12.4",
+		"typo3/cms-redirects": "^12.4",
+		"typo3/cms-reports": "^12.4",
+		"typo3/cms-rte-ckeditor": "^12.4",
+		"typo3/cms-setup": "^12.4",
+		"typo3/cms-seo": "^12.4",
+		"typo3/cms-sys-note": "^12.4",
+		"typo3/cms-t3editor": "^12.4",
+		"typo3/cms-tstemplate": "^12.4",
+		"typo3/cms-viewpage": "^12.4",
+		"kitodo/presentation": "@dev",
+		"slub/dfgviewer": "@dev"
 	},
     "minimum-stability": "dev",
 	"prefer-stable": true,
 	"scripts": {
 		"typo3-cms-scripts": [
-			"typo3cms install:fixfolderstructure"
+			"typo3 install:fixfolderstructure"
 		],
 		"post-autoload-dump": [
 			"@typo3-cms-scripts"

@@ -1,4 +1,4 @@
-base: 'https://dfgviewer-dist.ddev.site/'
+base: 'https://dfgviewer-dist-update-12.ddev.site/'
 baseVariants: {  }
 errorHandling: {  }
 languages:

@@ -25,23 +25,23 @@ ddev config \
     --project-type=typo3 \
     --docroot=public \
     --create-docroot \
-    --php-version=7.4 \
+    --php-version=8.2 \
     --webserver-type=apache-fpm \
-    --mariadb-version=10.1 \
+    --mariadb-version=10.6 \
     "--web-environment=$WEB_ENV"
 
 ddev start
 
-ddev composer create -y "typo3/cms-base-distribution:^9.5" --prefer-dist
-ddev composer config platform.php "7.4"
+ddev composer create -y "typo3/cms-base-distribution:^12.4" --prefer-dist
+ddev composer config platform.php "8.2"
 
 # Install typo3-console for CLI setup
-# Version 5.8.6 is the latest that supports TYPO3 9.5
-ddev composer require helhum/typo3-console "^5.8.6"
+# Version 8.2 is the latest that supports TYPO3 12.4
+ddev composer require helhum/typo3-console "^8.2"
 
 ddev typo3cms install:setup
 
-ddev composer require slub/dfgviewer:^5
+ddev composer require slub/dfgviewer:^7
 
 ddev typo3 extension:activate dlf
 ddev typo3 extension:activate dfgviewer

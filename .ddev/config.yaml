@@ -1,7 +1,7 @@
-name: dfgviewer-dist
+name: dfgviewer-dist-update-12
 type: typo3
 docroot: public
-php_version: "7.4"
+php_version: "8.2"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -10,14 +10,14 @@ additional_hostnames: []
 additional_fqdns: []
 database:
     type: mariadb
-    version: "10.1"
+    version: "10.6"
 # DDEV tries to write an AdditionalConfiguration.php on start, so we need
 # to make sure that the target folder exists
 hooks:
     pre-start:
         - exec-host: mkdir -p public/typo3conf/
 timezone: Europe/Berlin
-nodejs_version: "18"
+nodejs_version: "22"
 use_dns_when_possible: true
 composer_version: ""
 web_environment:
